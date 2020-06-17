@@ -1,5 +1,6 @@
 package com.codechayanne;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class EmailAdm implements administration {
@@ -32,16 +33,20 @@ public class EmailAdm implements administration {
     }
 
 
-    /* Input Object */
-
-    Scanner in = new Scanner(System.in);
 
 
     /* Methods */
 
     @Override
-    public String password() {
-        return null;
+    public void password() {
+
+        Random r = new Random();
+        String alphabet = "123xyz";
+
+        for (int i = 0; i < 10; i++) {
+
+            System.out.print(alphabet.charAt(r.nextInt(alphabet.length())));
+        }
     }
 
     @Override
