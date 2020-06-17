@@ -46,8 +46,10 @@ public class EmailAdm implements administration {
 
     @Override
     public String email() {
+        String email;
 
-        return null;
+        email = this.firstname + this.lastname + this.Domain;
+        return email;
     }
 
     @Override
@@ -83,5 +85,4 @@ public class EmailAdm implements administration {
 
         return this.department;
     }
-
 }
