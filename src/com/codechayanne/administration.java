@@ -3,7 +3,7 @@ package com.codechayanne;
 public interface administration {
 
     // generate password
-    public String password();
+    public void password();
 
 
     //generate email
