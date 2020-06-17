@@ -10,8 +10,15 @@ public class EmailAdm implements administration {
     private String firstname;
     private String lastname;
     private String department;
-    private String emailcapacity = "15GB";
-    private String Domain        = "@company.com";
+    private String emailcapacity;
+    private String Domain;
+
+
+    public EmailAdm(){
+
+        this.emailcapacity = "15GB";
+        this.Domain        = "@company.com";
+    }
 
 
     /* Getters and Setters */
@@ -32,6 +39,14 @@ public class EmailAdm implements administration {
         this.lastname = lastname;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getEmailcapacity() {
+        return emailcapacity;
+    }
+
 
 
 
@@ -41,7 +56,7 @@ public class EmailAdm implements administration {
     public void password() {
 
         Random r = new Random();
-        String alphabet = "123xyz";
+        String alphabet = "1295xyzrgb";
 
         for (int i = 0; i < 10; i++) {
 
@@ -57,8 +72,8 @@ public class EmailAdm implements administration {
         return email;
     }
 
-    @Override
-    public String setDepartment(int x) {
+
+    public void setDepartment(int x) {
 
         System.out.println("Please select the new hire department: ");
         System.out.println("1 - Accounting");
@@ -87,7 +102,5 @@ public class EmailAdm implements administration {
                 this.department = "no department have been assign";
                 break;
         }
-
-        return this.department;
     }
 }
