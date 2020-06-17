@@ -10,7 +10,7 @@ public interface administration {
     public String email();
 
     // Assign a Department
-    public String setDepartment(int x);
+    public void setDepartment(int x);
 
 
 }
